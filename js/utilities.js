@@ -4,3 +4,14 @@ function getInputValueById(id) {
   return inputValue;
 }
 
+function getInnerTextById (id){
+    let innerText = document.getElementById(id).innerText;
+        return innerText ;
+}
+
+function getInnerTextNumberById (id){
+    let innerText = document.getElementById(id).innerText;
+        innerText = parseFloat(innerText);
+        return innerText ;
+}
+

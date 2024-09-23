@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-05</title>
+    <!-- DaisyUi and Tailwind css cdn added here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- vanilla css file link here -->
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              tittleClr: "#111111",
+              textClr: "rgba(17, 17, 17, 0.7)",
+              bgClr: "#B4F461",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="mx-auto">
+    <header class="sticky top-0 backdrop-blur-3xl z-50">
+      <!-- header section start -->
+      <section>
+        <div class="w-full navbg">
+          <!-- top --navbar  -->
+          <div class="w-11/12 sm:w-10/12 mx-auto py-3">
+            <div class="navbar">
+              <!-- left item start -->
+              <div class="navbar-start">
+                <a href="./index.html"
+                  class="text-titleClr text-xl px-6 py-2 font-bold bg-bgClr rounded-lg"
+                  >Home</a
+                >
+              </div>
+              <!-- left item start -->
+              <!-- center item start -->
+              <div class="navbar-center hidden lg:flex gap-4">
+                <div class="">
+                  <img class="w-full" src="./assets/logo.png" alt="" />
+                </div>
+                <div class="text-xl font-semibold text-titleClr">
+                  Donate Bangladesh
+                </div>
+              </div>
+              <!-- center item start -->
+              <!-- right item start -->
+              <div class="navbar-end flex gap-2">
+                <img class="" src="./assets/coin.png" alt="" />
+                <h1 class="text-xl font-semibold text-textClr">2500 BDT</h1>
+              </div>
+              <!-- right item ends -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- main  -->
+    <main>
+      <section class="w-10/12 mx-auto py-12">
+        <!-- title -->
+        <div class="mb-10">
+            <h1 class="flex gap-1 items-end text-2xl font-bold " >Important FAQ <span> <img src="./assets/icons8-faq.gif" alt=""></span></h1>
+        </div>
+        <!-- question box -->
+        <div class="">
+          <div class="join join-vertical w-full">
+            <div
+              class="collapse collapse-arrow join-item border-base-300 border"
+            >
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">
+               What is the document object model (DOM) ?
+              </div>
+              <div class="collapse-content">
+                <p class="text-sm text-textClr">
+                    The Document Object Model (DOM) is a programming interface that represents HTML and XML documents as a tree of objects, where each node corresponds to parts of the document (elements, attributes, text). It allows developers to dynamically manipulate the document's structure, content, and style using languages like JavaScript. The DOM facilitates interactive web experiences by enabling tasks such as adding, removing, or modifying elements and handling events triggered by user actions. This makes it a crucial component in modern web development, allowing for real-time updates and user interactions on web pages.</p>
+              </div>
+            </div>
+            <div
+              class="collapse collapse-arrow join-item border-base-300 border"
+            >
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">
+                How do you select an element from DOM ?
+              </div>
+              <div class="collapse-content">
+                <p class="text-sm text-textClr">To select an element from the DOM, you can use various methods in JavaScript. The most common are:
+                    <ul class="list-inside pl-5" >
+                        <li class="flex gap-1 text-sm text-textClr items-start md:items-center" > <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span>document.getElementById('id') for selecting by ID.</li>
+                        <li class="flex text-sm text-textClr gap-1 items-start md:items-center"> <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span> document.getElementsByClassName('class') for selecting by class name.</li>
+                        <li class="flex text-sm text-textClr gap-1 items-start md:items-center"> <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span>document.getElementsByTagName('tag') for selecting by tag name.</li>
+                        <li class="flex text-sm text-textClr gap-1 items-start md:items-center"> <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span> document.querySelector('selector') for selecting the first matching element using CSS selectors.</li>
+                        <li class="flex text-sm text-textClr gap-1 items-start md:items-center">  <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span>document.querySelectorAll('selector') for selecting all matching elements.</li>
+                    </ul>
+                   
+                </p>
+              </div>
+            </div>
+            <div
+              class="collapse collapse-arrow join-item border-base-300 border"
+            >
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">
+              What is event delegation in the context of DOM and why is it usefull?
+              </div>
+              <div class="collapse-content">
+                <p class="text-sm text-textClr">Event delegation is a technique in the DOM that involves attaching a single event listener to a parent element instead of multiple listeners to child elements. When an event occurs on a child element, the event bubbles up to the parent, where it can be handled. This approach is useful for several reasons: it reduces memory usage by minimizing the number of event listeners, simplifies code maintenance, and allows for dynamic content handling, as new child elements will automatically inherit the event listener without needing additional setup. Overall, it enhances performance and efficiency in event management.</p>
+              </div>
+            </div>
+            <div
+            class="collapse collapse-arrow join-item border-base-300 border"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+                How can you change an element’s content?
+            </div>
+            <div class="collapse-content">
+              <p class="text-sm text-textClr">Use element.textContent or element.innerHTML.</p>
+            </div>
+          </div>
+          <div
+          class="collapse collapse-arrow join-item border-base-300 border"
+        >
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            What does querySelector do?
+          </div>
+          <div class="collapse-content">
+            <p class="text-sm text-textClr">The `querySelector` method in the DOM selects the first element that matches a specified CSS selector. It allows for flexible selection using class names, IDs, attributes, or complex selectors, returning the element as an object. If no matching element is found, it returns `null`..</p>
+          </div>
+        </div>
+        <div
+        class="collapse collapse-arrow join-item border-base-300 border"
+      >
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium">
+            How can you add a new element to the DOM?
+        </div>
+        <div class="collapse-content">
+          <p class="text-sm text-textClr">
+            <ul class="list-inside">
+                <li class="flex gap-1 text-sm text-textClr items-start md:items-center" > <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span>Create the Element: Use document.createElement('tagName') to create a new element, where 'tagName' is the desired HTML tag (e.g., 'div', 'p').</li>
+                <li class="flex gap-1 text-sm text-textClr items-start md:items-center" > <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span>Set Attributes or Content: Modify the new element’s properties, such as element.textContent or element.setAttribute('attr', 'value').</li>
+                <li class="flex gap-1 text-sm text-textClritems-start md:items-center" > <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span>Select a Parent Element: Use a method like document.getElementById('parentId') to select the parent element where you want to append the new element..</li>
+                <li class="flex gap-1 text-sm text-textClr items-start md:items-center" > <span class="w-4 h-4 rounded-full flex items-end justify-center"><img class="w-full" src="./assets/icons8-star.gif" alt=""></span>Append the Element: Use parentElement.appendChild(newElement) to add the new element to the DOM.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- script -->
+    <script src="./js/blogs.js"></script>
+  </body>
+</html>
