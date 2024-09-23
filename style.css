@@ -1,0 +1,8 @@
+body{
+    font-family: "Lexend", system-ui;
+    max-width: 1440px ;
+    margin: 0 auto;
+}
+.navbg{
+    background: rgb(249, 247, 243 , 0.9);
+}
