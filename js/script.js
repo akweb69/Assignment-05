@@ -52,6 +52,8 @@ function donateNoakhali() {
   
         const historyBox = document.getElementById("history-item-box");
         historyBox.insertBefore(historyItem , historyBox.firstChild)
+
+        
                 // history section
       } else {
         return alert("Your Balance is Low!");
@@ -60,6 +62,7 @@ function donateNoakhali() {
       //   console.log(myNewBalance)
       //   console.log(inputAmount)
     });
+    
   }
   donateNoakhali();
   

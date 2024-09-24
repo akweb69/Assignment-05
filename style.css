@@ -20,6 +20,22 @@ body{
     border-radius: 1rem;
     background-color: aliceblue;
     transition: all 200ms ease-in-out;
+    border: 2px dashed rgba(30, 74, 85, 0.267);
+    animation: modal 1s  ease-in-out  infinite;
+}
+@keyframes modal {
+    0%{
+        
+    }    
+    50%{
+        box-shadow: 0px 0px 30px rgba(12, 32, 37, 0.267);
+    
+        
+    }  
+    0%{
+        box-shadow: 0px 0px 0px #3784;
+       
+    }  
 }
 .click-modal{
     top: 50%;
