@@ -19,7 +19,7 @@ body{
     /* border: 1px solid rgba(147, 145, 141, 0.9); */
     border-radius: 1rem;
     background-color: aliceblue;
-    transition: all 200ms ease-in-out;
+    transition: all 500ms ease-in-out;
     border: 2px dashed rgba(30, 74, 85, 0.267);
     animation: modal 1s  ease-in-out  infinite;
 }
