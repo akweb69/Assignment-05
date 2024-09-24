@@ -1,16 +1,16 @@
 // for box number -02 donation added system
 
-function donateNoakhali() {
+function donateQouta() {
     // console.log( feniBalance)
     let myCurrentBalance = parseFloat(getInnerTextNumberById("my-balance"));
     // console.log(myCurrentBalance)
   
-    document.getElementById("btn-1").addEventListener("click", function () {
+    document.getElementById("btn-3").addEventListener("click", function () {
       //   console.log('ok')
-      let inputAmount = getInputValueById("input-1");
+      let inputAmount = getInputValueById("input-3");
       let myBalanceElement = getInnerTextById("my-balance");
-      let feniBalanceElement = getInnerTextById("noakhali-balance");
-      let feniBalance = parseFloat(getInnerTextNumberById("noakhali-balance"));
+      let feniBalanceElement = getInnerTextById("qouta-balance");
+      let feniBalance = parseFloat(getInnerTextNumberById("qouta-balance"));
   
       if (inputAmount <= 0) {
         return alert("Your input is not a Valid number");
@@ -35,7 +35,7 @@ function donateNoakhali() {
         //  modal close
   
         //    history section
-        const title = document.getElementById("title-1").innerText;
+        const title = document.getElementById("title-3").innerText;
         //   create new div
         let historyItem = document.createElement("div");
         historyItem.className = "border-3 border-indigo-600 rounded-l-lg";
@@ -52,7 +52,7 @@ function donateNoakhali() {
   
         const historyBox = document.getElementById("history-item-box");
         historyBox.insertBefore(historyItem , historyBox.firstChild)
-                // history section
+        // history section
       } else {
         return alert("Your Balance is Low!");
       }
@@ -61,38 +61,5 @@ function donateNoakhali() {
       //   console.log(inputAmount)
     });
   }
-  donateNoakhali();
+  donateQouta();
   
-
-
-//   
-// donation and history btn
-// 
-function donationHistory (){
-const donatiionBnt = document.getElementById('donation-btn');
-const historyBtn = document.getElementById('history-btn');
-const donateSection = document.getElementById('donate-section');
-const historySection = document.getElementById('history-section')
-
-donatiionBnt.addEventListener('click', function(){
-historySection.classList.add("hidden")
-donateSection.classList.remove('hidden')
-historyBtn.style.backgroundColor = '#fff'
-donatiionBnt.style.backgroundColor = '#b4f461'
-donatiionBnt.style.border = 'none'
-
-
-
-
-})
-historyBtn.addEventListener('click', function(){
-    historySection.classList.remove("hidden");
-    donateSection.classList.add('hidden');
-    historyBtn.style.backgroundColor = '#B4F461';
-    donatiionBnt.style.backgroundColor = '#fff'
-    donatiionBnt.style.border = '1px solid rgba(17, 17, 17, 0.3)'
-    
-    })
-}
-donationHistory()
-// 

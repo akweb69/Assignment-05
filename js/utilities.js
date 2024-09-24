@@ -5,7 +5,7 @@ function getInputValueById(id) {
 }
 
 function getInnerTextById (id){
-    let innerText = document.getElementById(id).innerText;
+    let innerText = document.getElementById(id);
         return innerText ;
 }
 
@@ -14,4 +14,5 @@ function getInnerTextNumberById (id){
         innerText = parseFloat(innerText);
         return innerText ;
 }
+
 
